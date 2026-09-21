@@ -104,6 +104,23 @@ class HashMap {
     }
   }
 
+  // return an array containing all the keys (not values) inside the hash map
+  keys() {
+    const keys = [];
+    
+    // look for keys in hash map
+    for (const bucket of this.buckets) {
+      for (let i = 0; i < bucket.length; i++) {
+        const key = bucket[i][0];
+        if (key !== null) {
+          keys.push(key); // add key to array
+        }
+      }
+    }
+    
+    return keys;
+  }
+
 }
 
 export { HashMap };

@@ -11,6 +11,7 @@ This project contains the `HashMap` class containing the following functions:
   - If the key is not in the hash map, it returns false
 - `length()` returns the number of stored keys in the hash map
 - `clear()` removes all entries in the hash map
+- `keys()` returns an array containing all the keys (not values) inside the hash map
 
 ## Description
 This project demonstrates the skills learnt from the JavaScript course in The Odin Project up until the [HashMap Data Structure](https://www.theodinproject.com/lessons/javascript-hashmap-data-structure) topic. 
