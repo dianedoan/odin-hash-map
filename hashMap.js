@@ -121,7 +121,7 @@ class HashMap {
     return keys;
   }
 
-  // returns an array containing all the values (not keys) inside the hash map
+  // return an array containing all the values (not keys) inside the hash map
   values() {
     const values = [];
 
@@ -136,6 +136,24 @@ class HashMap {
     }
 
     return values;
+  }
+
+  // return an array containing each key-value pair in their own arrays
+  entries() {
+    const entries = [];
+
+    // look for key-value pairs
+    for (const bucket of this.buckets) {
+      for (let i = 0; i < bucket.length; i++) {
+        const key = bucket[i][0];
+        const value = bucket[i][1];
+        if (key !== null && value !== null) {
+          entries.push([key, value]); // add key-value pairs to array
+        }
+      }
+    }
+
+    return entries;
   }
 
 }

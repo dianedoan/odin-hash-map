@@ -13,6 +13,8 @@ This project contains the `HashMap` class containing the following functions:
 - `clear()` removes all entries in the hash map
 - `keys()` returns an array containing all the keys (not values) inside the hash map
 - `values()` returns an array containing all the values (not keys) inside the hash map
+- `entries()` returns an array that contains each key-value pair in their own arrays
+  - For example: `[[firstKey, firstValue], [secondKey, secondValue]]`
 
 ## Description
 This project demonstrates the skills learnt from the JavaScript course in The Odin Project up until the [HashMap Data Structure](https://www.theodinproject.com/lessons/javascript-hashmap-data-structure) topic. 
