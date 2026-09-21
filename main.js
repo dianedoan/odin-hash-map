@@ -6,3 +6,5 @@ test.set('apple', 'red')
 console.log(test);
 console.log(test.get('apple'));
 console.log(test.get('lion'));
+console.log(test.has('apple'));
+console.log(test.has('lion'));

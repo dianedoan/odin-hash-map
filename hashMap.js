@@ -47,10 +47,24 @@ class HashMap {
       if (bucket[i][0] === key) {
         const value = bucket[i][1];
         return value;
-      } else {
-        return undefined;
       }
     }
+    
+    return undefined;
+  }
+  // take a key as an argument and returns a boolean based on whether or not the key is in the hash map
+  has(key) {
+    const index = this.hash(key);
+    const bucket = this.buckets[index];
+
+    // check if key exists in hash map
+    for (let i = 0; i < bucket.length; i++) {
+      if (bucket[i][0] === key) {
+        return true; // key exists
+      }
+    }
+
+    return false; // key does not exist
   }
 
 }
