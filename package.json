@@ -1,0 +1,21 @@
+{
+  "name": "odin-hash-map",
+  "version": "1.0.0",
+  "description": "This project contains the `HashMap` class containing the following functions:\r - `hash(key)` takes a string key and produces a hash code with it\r - `set(key, value)` takes a key and a value to associate with the key\r   - If the key already exists in the hash map, then the old value associated with it should be overwritten by the new one",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dianedoan/odin-hash-map.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/dianedoan/odin-hash-map/issues"
+  },
+  "homepage": "https://github.com/dianedoan/odin-hash-map#readme"
+}
