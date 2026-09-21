@@ -85,6 +85,17 @@ class HashMap {
     return false; // key does not exist
   }
 
+  // returns the number of stored keys in the hash map
+  length() {
+    let length = 0;
+
+    for (const bucket of this.buckets) {
+      length += bucket.length; // add all lengths of each bucket together
+    }
+
+    return length;
+  }
+
 }
 
 export { HashMap };
