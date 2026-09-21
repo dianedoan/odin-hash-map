@@ -22,6 +22,27 @@ class HashMap {
 
   // take a key and a value to associate with the key
   set(key, value) {
+    // check if there are more entries than max load
+    const maxLoad = this.loadFactor * this.capacity;
+    if (this.length() >= maxLoad) {
+      const oldBuckets = this.buckets;
+
+      // double bucket capacity
+      this.capacity = this.capacity * 2;
+      this.buckets = [];
+      for (let i = 0; i < this.capacity; i++) {
+        this.buckets.push([]);
+      }
+
+      // rehash values into new buckets array
+      for (const bucket of oldBuckets) {
+        for (const [oldKey, oldValue] of bucket) {
+          const index = this.hash(oldKey);
+          this.buckets[index].push([oldKey, oldValue]);
+        }
+      }
+    }
+
     const index = this.hash(key); // use hash code as index of bucket array to store the key-value pair
     const bucket = this.buckets[index]; // find bucket at index
 
