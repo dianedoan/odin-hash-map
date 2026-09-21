@@ -67,7 +67,7 @@ class HashMap {
     return false; // key does not exist
   }
 
-  // takes a key as an argument
+  // take a key as an argument
   // if the key is in the hash map, it removes the entry with that key and returns true
   // if the key isn't in the hash map, it returns false
   remove(key) {
@@ -85,7 +85,7 @@ class HashMap {
     return false; // key does not exist
   }
 
-  // returns the number of stored keys in the hash map
+  // return the number of stored keys in the hash map
   length() {
     let length = 0;
 
@@ -94,6 +94,14 @@ class HashMap {
     }
 
     return length;
+  }
+
+  // remove all entries in the hash map
+  clear() {
+    // set length to 0 for each bucket
+    for (const bucket of this.buckets) {
+      bucket.length = 0;
+    }
   }
 
 }
