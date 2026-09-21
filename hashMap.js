@@ -121,6 +121,23 @@ class HashMap {
     return keys;
   }
 
+  // returns an array containing all the values (not keys) inside the hash map
+  values() {
+    const values = [];
+
+    // look for values in hash map
+    for (const bucket of this.buckets) {
+      for (let i = 0; i < bucket.length; i++) {
+        const value = bucket[i][1];
+        if (value !== null) {
+          values.push(value); // add value to array
+        }
+      }
+    }
+
+    return values;
+  }
+
 }
 
 export { HashMap };
