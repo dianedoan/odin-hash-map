@@ -49,7 +49,7 @@ class HashMap {
         return value;
       }
     }
-    
+
     return undefined;
   }
   // take a key as an argument and returns a boolean based on whether or not the key is in the hash map
@@ -61,6 +61,24 @@ class HashMap {
     for (let i = 0; i < bucket.length; i++) {
       if (bucket[i][0] === key) {
         return true; // key exists
+      }
+    }
+
+    return false; // key does not exist
+  }
+
+  // takes a key as an argument
+  // if the key is in the hash map, it removes the entry with that key and returns true
+  // if the key isn't in the hash map, it returns false
+  remove(key) {
+    const index = this.hash(key);
+    const bucket = this.buckets[index];
+
+    // check if key exists in hash map
+    for (let i = 0; i < bucket.length; i++) {
+      if (bucket[i][0] === key) { // key exists
+        bucket.splice(i, 1); // remove entry
+        return true; 
       }
     }
 

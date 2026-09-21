@@ -6,6 +6,9 @@ This project contains the `HashMap` class containing the following functions:
 - `get(key)` takes a key as an argument and returns the value that is associated with it
   - If the key is not found, return `undefined`
 - `has(key)` takes a key as an argument and returns a boolean based on whether or not the key is in the hash map
+- `remove(key)` takes a key as an argument
+  - If the given key is in the hash map, it removes the entry with that key then returns true
+  - If the key is not in the hash map, it returns false
 
 ## Description
 This project demonstrates the skills learnt from the JavaScript course in The Odin Project up until the [HashMap Data Structure](https://www.theodinproject.com/lessons/javascript-hashmap-data-structure) topic. 
