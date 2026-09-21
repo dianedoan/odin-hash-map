@@ -47,6 +47,8 @@ class HashMap {
       if (bucket[i][0] === key) {
         const value = bucket[i][1];
         return value;
+      } else {
+        return undefined;
       }
     }
   }
