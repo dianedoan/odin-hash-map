@@ -25,7 +25,7 @@ class HashMap {
     const index = this.hash(key); // use hash code as index of bucket array to store the key-value pair
     const bucket = this.buckets[index]; // find bucket at index
 
-    // if key already exists in hash map,  overwrite old value with new one
+    // if key already exists in hash map, overwrite old value with new one
     for (let i = 0; i < bucket.length; i++) {
       if (bucket[i][0] === key) {
         bucket[i][1] = value;
@@ -36,7 +36,21 @@ class HashMap {
     // otherwise store key-value pair in bucket
     bucket.push([key, value]);
   }
-  
+
+  // take a key and return the value that is associated with it
+  get(key) {
+    const index = this.hash(key);
+    const bucket = this.buckets[index];
+
+    // get value associated with key
+    for (let i = 0; i < bucket.length; i++) {
+      if (bucket[i][0] === key) {
+        const value = bucket[i][1];
+        return value;
+      }
+    }
+  }
+
 }
 
 export { HashMap };
